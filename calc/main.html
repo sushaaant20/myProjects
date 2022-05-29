@@ -7,35 +7,38 @@
     <title>Calc</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
 </head>
 <body class=>
     <div class="calculator bg-white dark:bg-black">
-        <input type="number" name="" id="" placeholder="0">
+        <input type="number" name="" id="screen2" placeholder="">
+        <input type="number" name="" id="screen1" placeholder="0">
         <div class="calculator-buttons">
-            <button class="calc-button is-clear hover:bg-violet-600">C</button>
-            <button class="calc-button hover:bg-violet-600">&divide;</button>
+            <button class="calc-button is-clear hover:bg-violet-600" id="clearbtn">C</button>
+            <button class="calc-button hover:bg-violet-600 data-opertor">&divide;</button>
 
-            <button class="calc-button hover:bg-violet-600">7</button>
-            <button class="calc-button hover:bg-violet-600">8</button>
-            <button class="calc-button hover:bg-violet-600">9</button>
-            <button class="calc-button hover:bg-violet-600">&times;</button>
+            <button class="calc-button hover:bg-violet-600 data-number">7</button>
+            <button class="calc-button hover:bg-violet-600 data-number">8</button>
+            <button class="calc-button hover:bg-violet-600 data-number">9</button>
+            <button class="calc-button hover:bg-violet-600 data-operator">&times;</button>
 
-            <button class="calc-button hover:bg-violet-600">4</button>
-            <button class="calc-button hover:bg-violet-600">5</button>
-            <button class="calc-button hover:bg-violet-600">6</button>
-            <button class="calc-button hover:bg-violet-600">&minus;</button>
+            <button class="calc-button hover:bg-violet-600 data-number">4</button>
+            <button class="calc-button hover:bg-violet-600 data-number">5</button>
+            <button class="calc-button hover:bg-violet-600 data-number">6</button>
+            <button class="calc-button hover:bg-violet-600 data-opertor">&minus;</button>
 
-            <button class="calc-button hover:bg-violet-600">1</button>
-            <button class="calc-button hover:bg-violet-600">2</button>
-            <button class="calc-button hover:bg-violet-600">3</button>
-            <button class="calc-button hover:bg-violet-600">&plus;</button>
+            <button class="calc-button hover:bg-violet-600 data-number">1</button>
+            <button class="calc-button hover:bg-violet-600 data-number">2</button>
+            <button class="calc-button hover:bg-violet-600 data-number">3</button>
+            <button class="calc-button hover:bg-violet-600 data-opertor">&plus;</button>
 
-            <button class="calc-button is-zero hover:bg-violet-600">0</button>
-            <button class="calc-button hover:bg-violet-600">.</button>
-            <button class="calc-button is-equals hover:bg-violet-600">&equals;</button>
+            <button class="calc-button is-zero hover:bg-violet-600 data-number">0</button>
+            <button class="calc-button hover:bg-violet-600 data-number" id="pointBtn">.</button>
+            <button class="calc-button is-equals hover:bg-violet-600 data-opertor" id="is-equal">&equals;</button>
             
             
         </div>
     </div>
+    
 </body>
 </html>
