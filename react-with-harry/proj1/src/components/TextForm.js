@@ -1,11 +1,18 @@
 import React, {useState} from 'react'
 
 export default function TextForm(props) {
-    const [text, setText] = useState("Enter the Text here")
+    const [text, setText] = useState("")
+
     const handleUpClick = () =>{
         let newText = text.toUpperCase();
         setText(newText)
     }
+
+    const handleLoClick = () =>{
+        let newText = text.toLowerCase();
+        setText(newText)
+    }
+
     const handleOnChange = (event) =>{
         setText(event.target.value)
     }
@@ -13,10 +20,24 @@ export default function TextForm(props) {
   return (
 
 <div className="mb-3">
-    <div className='mb-3'>
-    <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="8"></textarea>
+    <div className='mb-3 my-2'>
+      <p>Enter your text below </p>
+    <textarea className="form-control my-3" id="myBox" value={text} onChange={handleOnChange} rows="8"></textarea>
     </div>
-    <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
+    <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</button>
+    <button className="btn btn-primary" onClick={handleLoClick}>Convert to Lowercase</button>
+
+    <div className="container fluid border border-radius-3 my-2 p-3 mb-2 bg-secondary text-white ">
+      <h2>
+        Preview
+      </h2>
+      <span>
+      <p>{text.split(" ").length - 1} Words and {text.length} characters</p>
+      <p>{0.008 * (text.split(" ").length - 1)} minutes to read</p>
+      <p>{text}</p>
+      </span>
+
+    </div>
 </div>
   )
 }
